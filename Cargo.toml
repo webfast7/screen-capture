@@ -1,0 +1,32 @@
+[workspace]
+members = [
+    "crates/capture-core",
+    "crates/capture-platform-linux",
+    "crates/capture-cli",
+    "crates/capture-editor",
+    "crates/capture-tray",
+    "crates/capture-utils",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+license = "MIT"
+authors = ["ryk"]
+rust-version = "1.85"
+
+[workspace.dependencies]
+ashpd = "0.13.8"
+clap = { version = "4.5.39", features = ["derive"] }
+eframe = { version = "0.27.2", default-features = false, features = ["default_fonts", "glow", "wayland", "x11"] }
+image = { version = "0.25.6", default-features = false, features = ["jpeg", "png"] }
+ksni = { version = "0.3.3", features = ["blocking"] }
+thiserror = "2.0.12"
+time = { version = "0.3.41", features = ["formatting", "local-offset", "macros"] }
+tokio = { version = "1.50.0", features = ["rt", "rt-multi-thread"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter", "fmt"] }
+url = "2.5.7"
+x11rb = { version = "0.13.1", default-features = false, features = ["xfixes"] }
+zbus = "5.14.0"
