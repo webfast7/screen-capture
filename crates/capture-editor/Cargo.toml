@@ -1,0 +1,18 @@
+[package]
+name = "capture-editor"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+ab_glyph = "0.2.29"
+capture-core = { path = "../capture-core" }
+capture-platform-linux = { path = "../capture-platform-linux" }
+capture-utils = { path = "../capture-utils" }
+clap.workspace = true
+eframe.workspace = true
+image.workspace = true
+imageproc = { version = "0.25.0", default-features = false }
+tracing.workspace = true
